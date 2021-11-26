@@ -1,0 +1,50 @@
+<title>CSS Art Project</title>
+
+<style>
+	@keyframes horiz {
+    0% { left: 0px; }
+    100% { left: calc(100% - 400px); }
+  }
+
+	@keyframes vert {
+    0% {top: 0px;  }
+    100% { top: calc(100% - 250px); }
+  }
+  
+  @keyframes bg-color {
+    0% { background-color: red; }
+    25% { background-color: blue; }
+    50% { background-color: green; }
+    75% { background-color: yellow; }
+  }
+
+
+ body{
+    background-color: black;
+    background-image: url(https://staticdelivery.nexusmods.com/mods/1151/images/145-0-1447254298.png);
+    background-size: 2050px;
+    background-repeat: no-repeat;
+    background-position-x: -50px; 
+  }
+  
+  .bouncy{
+    width: 400px;
+    height: 250px;
+    border-radius: 50%;
+    position: absolute;
+    background-image: url(https://images.vexels.com/media/users/3/143404/isolated/preview/59272fb8b184dd772be2b5552553622d-grey-dvd-logo-by-vexels.png);
+  	background-size: 355px;
+    background-position-x: 21px;
+    background-position-y: -50px;
+    
+    
+    animation-name: horiz, vert, bg-color;
+    animation-duration: 4s, 4s, 8s;
+    animation-delay: 0s, 2s, 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear, linear, steps(1);
+    animation-direction: alternate, alternate, normal;
+  }  
+</style>
+
+<div class="bouncy"></div>
